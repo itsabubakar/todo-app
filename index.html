@@ -2,102 +2,112 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Todo list</title>
+    <link rel="stylesheet" href="css-files/css/all.css" />
     <link rel="stylesheet" href="main.css" />
-    <script defer src="script.js"></script>
+    <title>To Do List App</title>
   </head>
-
   <body>
-    <h1 class="title">Stuff I need to do</h1>
+    <div class="main-conc">
+      <div class="side-bar">
+        <h2 class="list-title">Default Project</h2>
+        <ul data-lists>
+          <!-- <li class="list-item">Eat</li>
+                <li class="list-item">Sleep</li>
+                <li class="list-item">Try</li> -->
+        </ul>
 
-    <div class="all-tasks">
-      <h2 class="task-list-title">My lists</h2>
-      <ul class="task-list" data-listS>
-        <!-- <li class="list-name active-list">Youtube</li>
-        <li class="list-name">Work</li>
-        <li class="list-name">Grocery</li> -->
-      </ul>
-
-      <form action="" data-new-list-form>
-        <input 
-          type="text"
-          class="new list"
-          data-new-list-input
-          placeholder="new list name"
-          aria-label="new list name"
-        />
-        <button class="btn list create" aria-label="create new list">+</button>
-      </form>
-    </div>
-
-    <div class="todo-list" data-list-display-container>
-      <div class="todo-header">
-        <h2 class="list-title" data-list-title>YouTube</h2>
-        <p class="task-count" data-list-count>3 tasks remaining</p>
+        <form action="" data-new-list-form>
+          <input
+            type="text"
+            class="new list"
+            data-new-list-input
+            placeholder="New Project"
+            aria-label="new list name"
+          />
+          <button class="btn list create" aria-label="create new list">
+            +
+          </button>
+        </form>
       </div>
 
-      <div class="todo-body">
-        <div class="tasks" data-tasks>
-          <div class="task">
-            <input 
-              type="checkbox"
-              id="task-1"
-            />
-            <label for="task-1">
-              <span class="custom-checkbox"></span>
-              record todo list video
-            </label>
+      <div class="todo-list" data-list-display-container>
+        <div class="header">
+          <div class="header-text">
+            <h2 class="" data-list-title>My Day</h2>
+            <span class="day">Sunday, June 29</span>
           </div>
-          <!-- /task-1 -->
+          <div class="task-remaining">
+            <p class="class-count" data-list-count>0 task remaining</p>
+          </div>
+        </div>
 
-          
-            <!-- /task-2 -->
+        <div class="todo-body">
+          <div class="tasks" data-tasks>
+            <!-- <div class="task">
+                        <input type="checkbox" id="task-1">
+                        <label for="task-1">
+                            <span class="custom-checkbox"></span>
+                            You can redo it</label>
+                    </div> -->
+
+            <!-- End of task one -->
 
             <div class="task">
-                <input 
-                  type="checkbox"
-                  id="task-3"
-                />
-                <label for="task-3">
-                  <span class="custom-checkbox"></span>
-                  a third task
-                </label>
-              </div>
-              <!-- /task-3 -->
-        </div>
+              <input type="checkbox" id="task-2" />
+              <label for="task-2">
+                <span class="custom-checkbox"></span>
+                You can redo it</label
+              >
+            </div>
 
-        <div class="new-task-creator">
+            <!-- End of task two -->
+
+            <div class="task">
+              <input type="checkbox" id="task-3" />
+              <label for="task-3">
+                <span class="custom-checkbox"></span>
+                You can redo it</label
+              >
+            </div>
+
+            <!-- End of task three -->
+          </div>
+
+          <div class="new-tasks">
             <form action="" data-new-task-form>
-                <input 
-                  type="text"
-                  data-new-task-input
-                  class="new task task-create-input"
-                  placeholder="new task name"
-                  aria-label="new task name"
-                />
-                <button class="btn create" aria-label="create new task">+</button>
-              </form>
-        </div>
+              <input
+                type="text"
+                data-new-task-input
+                class="new task task-create-input"
+                placeholder="New task"
+                aria-label="new task name"
+              />
+              <button class="btn create-task" aria-label="create new task">
+                +
+              </button>
+            </form>
+          </div>
 
-        <div class="delete-stuff">
-          <button class="btn delete" data-clear-complete-tasks-button>Clear completed tasks</button>
-          <button class="btn delete" data-delete-list-button>Delete list</button>
+          <div class="delete-stuff">
+            <button class="btn delete" data-clear-complete-tasks-button>
+              Clear completed tasks
+            </button>
+            <button class="btn delete" data-delete-list-button>
+              Delete list
+            </button>
+          </div>
         </div>
       </div>
     </div>
-
-   
-    </div>
-
-    <template id='task-template'>
+    <template id="task-template">
       <div class="task">
-        <input type="checkbox"/>
-        <label >
-          <span class="custom-checkbox"></span>
-        </label>
+        <input type="checkbox" id="checkbox" />
+        <label> <span class="custom-checkbox"></span></label>
+        <input type="date" class="dateSelector" />
       </div>
     </template>
+    <script src="13-to-do-list.js"></script>
   </body>
 </html>
